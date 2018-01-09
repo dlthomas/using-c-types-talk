@@ -36,6 +36,7 @@ ls *.c | {
 	done
 } >slides.md
 pandoc --standalone -t dzslides -o slides.html $@ <slides.md
+sed -itmp 's/<code>/<code class="language-c">/' slides.html
 if [ "$MAKE_PATCH" ]; then
   git diff -R slides.html >slides.patch
 fi

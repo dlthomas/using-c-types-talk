@@ -1,5 +1,5 @@
 diff --git b/slides/slides.html a/slides/slides.html
-index 8f8315b..f1ab5b2 100644
+index eb3ff0e..a9d9c7e 100644
 --- b/slides/slides.html
 +++ a/slides/slides.html
 @@ -10,6 +10,9 @@
@@ -27,7 +27,7 @@ index 8f8315b..f1ab5b2 100644
    }
    .view section {
      -moz-transition: none;
-@@ -932,8 +935,8 @@
+@@ -1661,8 +1664,8 @@
    * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
    [role="note"] { display: none; }
    body {
@@ -38,7 +38,7 @@ index 8f8315b..f1ab5b2 100644
      position: absolute; top: 50%; left: 50%;
      overflow: hidden;
      display: none;
-@@ -1386,6 +1389,7 @@
+@@ -2115,6 +2118,7 @@
    }
  
  </script>

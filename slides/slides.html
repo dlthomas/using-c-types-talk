@@ -151,7 +151,7 @@
 <body>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -202,7 +202,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -253,7 +253,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -304,7 +304,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -355,7 +355,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -406,7 +406,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -457,7 +457,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code> slide06.c:20:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
+<pre class="error"><code class="language-c"> slide06.c:20:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
          return make_market(ask, bid);
                             ^~~
  slide06.c:13:28: note: passing argument to parameter here
@@ -467,7 +467,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -518,7 +518,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -569,7 +569,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -620,7 +620,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -671,7 +671,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef int price_t;
 
@@ -722,7 +722,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef int bid_price_t;
  typedef int ask_price_t;
@@ -773,7 +773,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
@@ -824,7 +824,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
@@ -875,7 +875,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -926,7 +926,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef int foo_index_t;
  typedef int bar_index_t;
@@ -977,7 +977,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
@@ -1028,7 +1028,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
@@ -1079,7 +1079,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
@@ -1130,7 +1130,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -1181,7 +1181,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -1232,7 +1232,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
 
 
@@ -1283,7 +1283,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
 
  #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
 
@@ -1334,7 +1334,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &lt;SDL.h&gt;
 
 
@@ -1383,7 +1383,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &quot;CheckedSDL.h&quot;
 
 
@@ -1432,7 +1432,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
+<pre class="error"><code class="language-c"> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
  ./CheckedSDL.h:29:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
@@ -1442,7 +1442,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &quot;CheckedSDL.h&quot;
 
 
@@ -1491,7 +1491,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &quot;CheckedSDL.h&quot;
 
 
@@ -1540,14 +1540,14 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code> slide25.c:9:41: error: use of undeclared identifier &#39;th&#39;
+<pre class="error"><code class="language-c"> slide25.c:9:41: error: use of undeclared identifier &#39;th&#39;
          texture = SDL_CreateTextureFromSurface(th, renderer, surface);
                                                 ^
  1 error generated.</code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &quot;CheckedSDL.h&quot;
 
 
@@ -1596,7 +1596,7 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
+<pre><code class="language-c">
  #include &quot;CheckedSDL.h&quot;
 
 
