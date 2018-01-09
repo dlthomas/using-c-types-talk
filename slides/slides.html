@@ -151,309 +151,309 @@
 <body>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-           /* Using C Types */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9           /* Using C Types */
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-           /* Using C Types */
-
-
-
- int make_market(int bid, int ask);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9           /* Using C Types */
+ 10 
+ 11 
+ 12 
+ 13 int make_market(int bid, int ask);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
-
-
-
- int make_market(int bid, int ask);
-
-
- int test(void) {
-    int bid = 1;
-    int ask = 3;
-
-    return make_market(ask, bid);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 int make_market(int bid, int ask);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     int bid = 1;
+ 18     int ask = 3;
+ 19 
+ 20     return make_market(ask, bid);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef int price_t;
-
-
- int make_market(price_t bid, price_t ask);
-
-
- int test(void) {
-    price_t bid = 1;
-    price_t ask = 3;
-
-    return make_market(ask, bid);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef int price_t;
+ 11 
+ 12 
+ 13 int make_market(price_t bid, price_t ask);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     price_t bid = 1;
+ 18     price_t ask = 3;
+ 19 
+ 20     return make_market(ask, bid);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef int bid_price_t;
- typedef int ask_price_t;
-
- int make_market(bid_price_t, ask_price_t);
-
-
- int test(void) {
-    bid_price_t bid = 1;
-    ask_price_t ask = 3;
-
-    return make_market(ask, bid);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef int bid_price_t;
+ 11 typedef int ask_price_t;
+ 12 
+ 13 int make_market(bid_price_t, ask_price_t);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     bid_price_t bid = 1;
+ 18     ask_price_t ask = 3;
+ 19 
+ 20     return make_market(ask, bid);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
- int make_market(bid_price_t, ask_price_t);
-
-
- int test(void) {
-    bid_price_t bid = { 1 };
-    ask_price_t ask = { 3 };
-
-    return make_market(ask, bid);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef struct { int v; } bid_price_t;
+ 11 typedef struct { int v; } ask_price_t;
+ 12 
+ 13 int make_market(bid_price_t, ask_price_t);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     bid_price_t bid = { 1 };
+ 18     ask_price_t ask = { 3 };
+ 19 
+ 20     return make_market(ask, bid);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
@@ -467,968 +467,1033 @@
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
- int make_market(bid_price_t, ask_price_t);
-
-
- int test(void) {
-    bid_price_t bid = { 1 };
-    ask_price_t ask = { 3 };
-
-    return make_market(ask, bid);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef struct { int v; } bid_price_t;
+ 11 typedef struct { int v; } ask_price_t;
+ 12 
+ 13 int make_market(bid_price_t, ask_price_t);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     bid_price_t bid = { 1 };
+ 18     ask_price_t ask = { 3 };
+ 19 
+ 20     return make_market(ask, bid);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
- int make_market(bid_price_t, ask_price_t);
-
-
- int test(void) {
-    bid_price_t bid = { 1 };
-    ask_price_t ask = { 3 };
-
-    return make_market(bid, ask);
-
-
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef struct { int v; } bid_price_t;
+ 11 typedef struct { int v; } ask_price_t;
+ 12 
+ 13 int make_market(bid_price_t, ask_price_t);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     bid_price_t bid = { 1 };
+ 18     ask_price_t ask = { 3 };
+ 19 
+ 20     return make_market(bid, ask);
+ 21 
+ 22 
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
- int make_market(bid_price_t, ask_price_t);
-
-
- int test(void) {
-    
-    /* requires C99 or newer */
-
-    return make_market(
-        (bid_price_t) { 1 },
-        (ask_price_t) { 3 });
- }
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 typedef struct { int v; } bid_price_t;
+ 11 typedef struct { int v; } ask_price_t;
+ 12 
+ 13 int make_market(bid_price_t, ask_price_t);
+ 14 
+ 15 
+ 16 int test(void) {
+ 17     
+ 18     /* requires C99 or newer */
+ 19 
+ 20     return make_market(
+ 21         (bid_price_t) { 1 },
+ 22         (ask_price_t) { 3 });
+ 23 }
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
- int is_crossed(int bid, int ask) {
-
-
-
-    return bid &gt;= ask;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 int is_crossed(int bid, int ask) {
+  9 
+ 10 
+ 11 
+ 12     return bid &gt;= ask;
+ 13 }
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef int price_t;
-
-
-
-
- int is_crossed(price_t bid, price_t ask) {
-
-
-
-    return bid &gt;= ask;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef int price_t;
+  4 
+  5 
+  6 
+  7 
+  8 int is_crossed(price_t bid, price_t ask) {
+  9 
+ 10 
+ 11 
+ 12     return bid &gt;= ask;
+ 13 }
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef int bid_price_t;
- typedef int ask_price_t;
-
-
-
- int is_crossed(bid_price_t bid, ask_price_t ask) {
-
-
-
-    return bid &gt;= ask;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef int bid_price_t;
+  4 typedef int ask_price_t;
+  5 
+  6 
+  7 
+  8 int is_crossed(bid_price_t bid, ask_price_t ask) {
+  9 
+ 10 
+ 11 
+ 12     return bid &gt;= ask;
+ 13 }
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
-
-
- int is_crossed(bid_price_t bid, ask_price_t ask) {
-
-
-
-    return bid.v &gt;= ask.v;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef struct { int v; } bid_price_t;
+  4 typedef struct { int v; } ask_price_t;
+  5 
+  6 
+  7 
+  8 int is_crossed(bid_price_t bid, ask_price_t ask) {
+  9 
+ 10 
+ 11 
+ 12     return bid.v &gt;= ask.v;
+ 13 }
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef struct { int v; } bid_price_t;
- typedef struct { int v; } ask_price_t;
-
-
-
- int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
-    int bid = bid_price.v;
-    int ask = ask_price.v;
-
-    return bid &gt;= ask;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef struct { int v; } bid_price_t;
+  4 typedef struct { int v; } ask_price_t;
+  5 
+  6 
+  7 
+  8 int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
+  9     int bid = bid_price.v;
+ 10     int ask = ask_price.v;
+ 11 
+ 12     return bid &gt;= ask;
+ 13 }
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
-
-
-
-
- int do_the_thing(int foo_index, int bar_index);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 int do_the_thing(int foo_index, int bar_index);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef int foo_index_t;
- typedef int bar_index_t;
-
-
-
-
-
-
-
-
- int do_the_thing(foo_index_t, bar_index_t);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef int foo_index_t;
+  4 typedef int bar_index_t;
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 int do_the_thing(foo_index_t, bar_index_t);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef struct { int v; } foo_index_t;
- typedef struct { int v; } bar_index_t;
-
-
-
-
-
-
-
-
- int do_the_thing(foo_index_t, bar_index_t);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef struct { int v; } foo_index_t;
+  4 typedef struct { int v; } bar_index_t;
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 
+ 12 
+ 13 int do_the_thing(foo_index_t, bar_index_t);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef struct { int v; } foo_index_t;
- typedef struct { int v; } bar_index_t;
-
-
- typedef struct foo_s { /* ... */ } foo_t;
- typedef struct bar_s { /* ... */ } bar_t;
-
- foo_t *lookup_foo(foo_index_t, foo_t *);
- bar_t *lookup_bar(bar_index_t, bar_t *);
-
- int do_the_thing(foo_index_t, bar_index_t);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef struct { int v; } foo_index_t;
+  4 typedef struct { int v; } bar_index_t;
+  5 
+  6 
+  7 typedef struct foo_s { /* ... */ } foo_t;
+  8 typedef struct bar_s { /* ... */ } bar_t;
+  9 
+ 10 foo_t *lookup_foo(foo_index_t, foo_t *);
+ 11 bar_t *lookup_bar(bar_index_t, bar_t *);
+ 12 
+ 13 int do_the_thing(foo_index_t, bar_index_t);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- typedef struct { int v; } foo_index_t;
- typedef struct { int v; } bar_index_t;
- typedef struct { int v; } bid_price_t;
-
- typedef struct foo_s { /* ... */ } foo_t;
- typedef struct bar_s { /* ... */ } bar_t;
-
- foo_t *lookup_foo(foo_index_t, foo_t *);
- bar_t *lookup_bar(bar_index_t, bar_t *);
-
- int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 typedef struct { int v; } foo_index_t;
+  4 typedef struct { int v; } bar_index_t;
+  5 typedef struct { int v; } bid_price_t;
+  6 
+  7 typedef struct foo_s { /* ... */ } foo_t;
+  8 typedef struct bar_s { /* ... */ } bar_t;
+  9 
+ 10 foo_t *lookup_foo(foo_index_t, foo_t *);
+ 11 bar_t *lookup_bar(bar_index_t, bar_t *);
+ 12 
+ 13 int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
-
-
-
-
- int bar();
-
- int foo() {
-    return bar();
- }
-
-
- int qux() {
-    /* return bar(); */
- }
-
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 int bar();
+ 10 
+ 11 int foo() {
+ 12     return bar();
+ 13 }
+ 14 
+ 15 
+ 16 int qux() {
+ 17     return bar();
+ 18 }
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+  6 typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+  7 
+  8 
+  9 int bar(main_thread_t);
+ 10 
+ 11 int foo(main_thread_t th) {
+ 12     return bar(th);
+ 13 }
+ 14 
+ 15 
+ 16 int qux(other_thread_t th) {
+ 17     return bar(th);
+ 18 }
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
 
-
-
- typedef struct main_thread_s { /* int unused; */ } main_thread_t;
- typedef struct other_thread_s { /* int unused; */ } other_thread_t;
-
-
+<pre class="error"><code class="language-c"> slide20.c:17:13: error: passing &#39;other_thread_t&#39; (aka &#39;struct other_thread_s&#39;) to parameter of incompatible type &#39;main_thread_t&#39; (aka &#39;struct main_thread_s&#39;)
+         return bar(th);
+                    ^~
+ slide20.c:9:22: note: passing argument to parameter here
  int bar(main_thread_t);
-
- int foo(main_thread_t th) {
-    return bar(th);
- }
-
- /*
- int qux(other_thread_t th) {
-    return bar(th);
- }
- */
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+                      ^
+ 1 error generated.</code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
-
-
- typedef struct main_thread_s { /* int unused; */ } main_thread_t;
- typedef struct other_thread_s { /* int unused; */ } other_thread_t;
-
-
- int bar(main_thread_t);
-
- int foo(main_thread_t th __attribute__((unused))) {
-    return bar(th);
- }
-
- /*
- int qux(other_thread_t th __attribute__((unused))) {
-    return bar(th);
- }
- */
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+  6 typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+  7 
+  8 
+  9 int bar(main_thread_t);
+ 10 
+ 11 int foo(main_thread_t th) {
+ 12     return bar(th);
+ 13 }
+ 14 
+ 15 
+ 16 int qux(other_thread_t th) {
+ 17     return bar(th);
+ 18 }
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
-
- #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
-
- typedef struct main_thread_s { /* int unused; */ } main_thread_t;
- typedef struct other_thread_s { /* int unused; */ } other_thread_t;
-
-
- int bar(TH(main));
-
- int foo(TH(main)) {
-    return bar(th);
- }
-
- /*
- int qux(TH(other)) {
-    return bar(th);
- }
- */
-
-
-
-
-
-
-
-
-                                               /* David L. L. Thomas, Jan 2018 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+  6 typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+  7 
+  8 
+  9 int bar(main_thread_t);
+ 10 
+ 11 int foo(main_thread_t th __attribute__((unused))) {
+ 12     return bar(th);
+ 13 }
+ 14 
+ 15 
+ 16 int qux(other_thread_t th __attribute__((unused))) {
+ 17 /* return bar(th); */
+ 18 }
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &lt;SDL.h&gt;
-
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(renderer, surface);
-    return 0;
- }
-
- void render_image() {
-    SDL_Window *win = SDL_CreateWindow(&quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(&amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(renderer);
-        if(texture) SDL_RenderCopy(renderer, texture, NULL, NULL);
-        SDL_RenderPresent(renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-
-    if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image();
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 
+  3 #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
+  4 
+  5 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+  6 typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+  7 
+  8 
+  9 int bar(TH(main));
+ 10 
+ 11 int foo(TH(main)) {
+ 12     return bar(th);
+ 13 }
+ 14 
+ 15 
+ 16 int qux(TH(other)) {
+ 17 /* return bar(th); */
+ 18 }
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28                                               /* David L. L. Thomas, Jan 2018 */
+ 29 
+ 30 
+ 31 
+ 32 
+ 33 
+ 34 
+ 35 
+ 36 
+ 37 
+ 38 
+ 39 
+ 40 
+ 41 
+ 42 
+ 43 
+ 44 
+ 45 
+ 46 
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &quot;CheckedSDL.h&quot;
+<pre><code class="language-c">  1 
+  2 #include &lt;SDL.h&gt;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image() {
+ 14     SDL_Window *win = SDL_CreateWindow(&quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(&amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(renderer);
+ 34         if(texture) SDL_RenderCopy(renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41 
+ 42     if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image();
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
 
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(renderer, surface);
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image(TH(main)) {
+ 14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(th, &amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(th, renderer);
+ 34         if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(th, renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41     main_thread_t th;
+ 42     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image(th);
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
@@ -1442,101 +1507,105 @@
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &quot;CheckedSDL.h&quot;
-
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(renderer, surface);
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image(TH(main)) {
+ 14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(th, &amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(th, renderer);
+ 34         if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(th, renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41     main_thread_t th;
+ 42     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image(th);
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &quot;CheckedSDL.h&quot;
-
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(th, renderer, surface);
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(th, renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image(TH(main)) {
+ 14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(th, &amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(th, renderer);
+ 34         if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(th, renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41     main_thread_t th;
+ 42     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image(th);
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
@@ -1547,101 +1616,105 @@
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &quot;CheckedSDL.h&quot;
-
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(th, renderer, surface);
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(th, renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image(TH(main)) {
+ 14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(th, &amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(th, renderer);
+ 34         if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(th, renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41     main_thread_t th;
+ 42     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image(th);
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
 </section>
 <section class="slide level6">
 
-<pre><code class="language-c">
- #include &quot;CheckedSDL.h&quot;
-
-
- SDL_Surface * volatile surface = NULL;
-
- int load_image_thread(void *renderer) {
-    surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-    SDL_Texture *texture = NULL;
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-        if(surface) {
-            texture = SDL_CreateTextureFromSurface(th, renderer, surface);
-            surface = NULL;
-        }
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Surface * volatile surface = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9 
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image(TH(main)) {
+ 14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18     SDL_Texture *texture = NULL;
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(th, &amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28         if(surface) {
+ 29             texture = SDL_CreateTextureFromSurface(th, renderer, surface);
+ 30             surface = NULL;
+ 31         }
+ 32 
+ 33         SDL_RenderClear(th, renderer);
+ 34         if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(th, renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41     main_thread_t th;
+ 42     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image(th);
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
 </section>
 <!-- {{{{ dzslides core
 #
@@ -1664,8 +1737,8 @@
   * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
   [role="note"] { display: none; }
   body {
-    width: 100em; height: 103em;
-    margin-left: -50em; margin-top: -51.5em;
+    width: 100em; height: 103.8em;
+    margin-left: -50em; margin-top: -51.9em;
     position: absolute; top: 50%; left: 50%;
     overflow: hidden;
     display: none;

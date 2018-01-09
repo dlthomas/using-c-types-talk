@@ -44,3 +44,5 @@ int main() {
 	render_image(th);
 	return EXIT_SUCCESS;
 }
+
+

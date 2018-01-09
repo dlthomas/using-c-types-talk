@@ -14,7 +14,7 @@ int foo() {
 
 
 int qux() {
-	/* return bar(); */
+	return bar();
 }
 
 

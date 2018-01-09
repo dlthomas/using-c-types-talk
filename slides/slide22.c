@@ -12,11 +12,11 @@ int foo(TH(main)) {
 	return bar(th);
 }
 
-/*
+
 int qux(TH(other)) {
-	return bar(th);
+ /* return bar(th); */
 }
-*/
+
 
 
 

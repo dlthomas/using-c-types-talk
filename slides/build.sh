@@ -6,6 +6,7 @@
 STARTED=
 
 function endslide { echo; echo "----"; echo; }
+function fmtcode { cat -n | sed 's/   //'; }
 
 ls *.c | {
 	while read nextc; do
@@ -15,7 +16,7 @@ ls *.c | {
     STARTED=1
     name=$(basename "$nextc" .c)
     echo "~~~"
-    sed 's/./ &/' "$nextc"
+    <"$nextc" fmtcode
     echo "~~~"
     if [ -f $name.notes ]; then
       echo "::: notes"
@@ -29,7 +30,7 @@ ls *.c | {
       echo "~~~"
       endslide
       echo "~~~"
-      sed 's/./ &/' "$nextc"
+      <"$nextc" fmtcode
       echo "~~~"
       rm tmp.out
     fi

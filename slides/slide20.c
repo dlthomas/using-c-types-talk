@@ -12,11 +12,11 @@ int foo(main_thread_t th) {
 	return bar(th);
 }
 
-/*
+
 int qux(other_thread_t th) {
 	return bar(th);
 }
-*/
+
 
 
 
