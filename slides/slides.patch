@@ -1,5 +1,5 @@
 diff --git b/slides/slides.html a/slides/slides.html
-index 8f8315b..c0d0b36 100644
+index 8f8315b..f1ab5b2 100644
 --- b/slides/slides.html
 +++ a/slides/slides.html
 @@ -10,6 +10,9 @@
@@ -12,6 +12,21 @@ index 8f8315b..c0d0b36 100644
  
  <style>
    html, .view body { background-color: black; counter-reset: slideidx; }
+@@ -103,10 +106,10 @@
+      https://developer.mozilla.org/en/CSS/CSS_transitions
+      How to use CSS3 Transitions: */
+   section {
+-    -moz-transition: left 400ms linear 0s;
+-    -webkit-transition: left 400ms linear 0s;
+-    -ms-transition: left 400ms linear 0s;
+-    transition: left 400ms linear 0s;
++    -moz-transition: opacity 450ms ease-out 0ms;
++    -webkit-transition: opacity 450ms ease-out 0ms;
++    -ms-transition: opacity 450ms ease-out 0ms;
++    transition: opacity 450ms ease-out 0ms;
+   }
+   .view section {
+     -moz-transition: none;
 @@ -932,8 +935,8 @@
    * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
    [role="note"] { display: none; }
