@@ -11,7 +11,8 @@ int load_image_thread(void *renderer) {
 }
 
 void render_image(TH(main)) {
-	SDL_Window *win = SDL_CreateWindow(th, "Hello World!", 100, 100, 640, 480, SDL_WINDOW_SHOWN);	
+	SDL_Window *win = SDL_CreateWindow(th, "Hello World!",
+      100, 100, 640, 480, SDL_WINDOW_SHOWN);
 	SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
 	SDL_CreateThread(load_image_thread, "image loader", renderer);
 
