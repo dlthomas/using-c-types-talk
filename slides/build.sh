@@ -35,4 +35,9 @@ ls *.c | {
 	done
 } >slides.md
 pandoc --standalone -t dzslides -o slides.html $@ <slides.md
-patch -p2 <slides.patch
+if [ "$MAKE_PATCH" ]; then
+  git diff -R slides.html >slides.patch
+  patch -p2 <slides.patch
+else
+  patch -p2 <slides.patch
+fi
