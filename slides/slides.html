@@ -457,6 +457,16 @@
 </section>
 <section class="slide level6">
 
+<pre class="error"><code> slide06.c:20:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
+         return make_market(ask, bid);
+                            ^~~
+ slide06.c:13:28: note: passing argument to parameter here
+ int make_market(bid_price_t, ask_price_t);
+                            ^
+ 1 error generated.</code></pre>
+</section>
+<section class="slide level6">
+
 <pre><code>
 
 
@@ -505,13 +515,6 @@
 
 
 </code></pre>
-<pre><code> slide06.c:20:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
-         return make_market(ask, bid);
-                            ^~~
- slide06.c:13:28: note: passing argument to parameter here
- int make_market(bid_price_t, ask_price_t);
-                            ^
- 1 error generated.</code></pre>
 </section>
 <section class="slide level6">
 
@@ -734,6 +737,38 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
@@ -751,6 +786,38 @@
 
     return bid.v &gt;= ask.v;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </code></pre>
@@ -772,6 +839,38 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
@@ -789,6 +888,38 @@
 
 
  int do_the_thing(int foo_index, int bar_index);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </code></pre>
@@ -810,6 +941,38 @@
  int do_the_thing(foo_index_t, bar_index_t);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
@@ -827,6 +990,38 @@
 
 
  int do_the_thing(foo_index_t, bar_index_t);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </code></pre>
@@ -846,6 +1041,38 @@
  bar_t *lookup_bar(bar_index_t, bar_t *);
 
  int do_the_thing(foo_index_t, bar_index_t);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </code></pre>
@@ -865,6 +1092,38 @@
  bar_t *lookup_bar(bar_index_t, bar_t *);
 
  int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </code></pre>
@@ -889,6 +1148,35 @@
  int qux() {
     /* return bar(); */
  }
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
@@ -911,7 +1199,36 @@
  int qux(other_thread_t th) {
     return bar(th);
  }
- */</code></pre>
+ */
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -933,7 +1250,36 @@
  int qux(other_thread_t th __attribute__((unused))) {
     return bar(th);
  }
- */</code></pre>
+ */
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -955,7 +1301,36 @@
  int qux(TH(other)) {
     return bar(th);
  }
- */</code></pre>
+ */
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
 </section>
 <section class="slide level6">
 
@@ -1057,6 +1432,16 @@
 </section>
 <section class="slide level6">
 
+<pre class="error"><code> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
+         texture = SDL_CreateTextureFromSurface(renderer, surface);
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
+ ./CheckedSDL.h:29:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
+ extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
+ ^
+ 1 error generated.</code></pre>
+</section>
+<section class="slide level6">
+
 <pre><code>
  #include &quot;CheckedSDL.h&quot;
 
@@ -1103,13 +1488,6 @@
     render_image(th);
     return EXIT_SUCCESS;
  }</code></pre>
-<pre><code> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
-         texture = SDL_CreateTextureFromSurface(renderer, surface);
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
- ./CheckedSDL.h:29:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
- extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
- ^
- 1 error generated.</code></pre>
 </section>
 <section class="slide level6">
 
@@ -1162,56 +1540,59 @@
 </section>
 <section class="slide level6">
 
-<pre><code>
- #include &quot;CheckedSDL.h&quot;
-
-
- SDL_Texture * volatile texture = NULL;
-
- int load_image_thread(void *renderer) {
-    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
-    texture = SDL_CreateTextureFromSurface(th, renderer, surface);
-    return 0;
- }
-
- void render_image(TH(main)) {
-    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
-       100, 100, 640, 480, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
-    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
-
-
-    for(;;) {
-        SDL_Event e;
-        while (SDL_PollEvent(th, &amp;e)){
-            switch(e.type) {
-                case SDL_QUIT: return;
-            }
-        }
-
-
-
-
-
-
-        SDL_RenderClear(th, renderer);
-        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
-        SDL_RenderPresent(th, renderer);
-        SDL_Delay(100);
-    }
- }
-
- int main() {
-    main_thread_t th;
-    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
-
-    render_image(th);
-    return EXIT_SUCCESS;
- }</code></pre>
-<pre><code> slide25.c:9:41: error: use of undeclared identifier &#39;th&#39;
+<pre class="error"><code> slide25.c:9:41: error: use of undeclared identifier &#39;th&#39;
          texture = SDL_CreateTextureFromSurface(th, renderer, surface);
                                                 ^
  1 error generated.</code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code>
+ #include &quot;CheckedSDL.h&quot;
+
+
+ SDL_Texture * volatile texture = NULL;
+
+ int load_image_thread(void *renderer) {
+    SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+    texture = SDL_CreateTextureFromSurface(th, renderer, surface);
+    return 0;
+ }
+
+ void render_image(TH(main)) {
+    SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
+       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+    SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
+    SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+
+
+    for(;;) {
+        SDL_Event e;
+        while (SDL_PollEvent(th, &amp;e)){
+            switch(e.type) {
+                case SDL_QUIT: return;
+            }
+        }
+
+
+
+
+
+
+        SDL_RenderClear(th, renderer);
+        if(texture) SDL_RenderCopy(th, renderer, texture, NULL, NULL);
+        SDL_RenderPresent(th, renderer);
+        SDL_Delay(100);
+    }
+ }
+
+ int main() {
+    main_thread_t th;
+    if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+
+    render_image(th);
+    return EXIT_SUCCESS;
+ }</code></pre>
 </section>
 <section class="slide level6">
 

@@ -24,11 +24,12 @@ ls *.c | {
     fi
     if ! gcc $(sdl2-config --cflags) -c -o /dev/null $nextc 2>tmp.out; then
       endslide
+      echo "~~~ {.error}"
+      sed 's/./ &/' tmp.out
+      echo "~~~"
+      endslide
       echo "~~~"
       sed 's/./ &/' "$nextc"
-      echo "~~~"
-      echo "~~~"
-      sed 's/./ &/' tmp.out
       echo "~~~"
       rm tmp.out
     fi
