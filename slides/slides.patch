@@ -1,8 +1,18 @@
 diff --git b/slides/slides.html a/slides/slides.html
-index 8f8315b..49c2022 100644
+index 8f8315b..c0d0b36 100644
 --- b/slides/slides.html
 +++ a/slides/slides.html
-@@ -932,8 +932,8 @@
+@@ -10,6 +10,9 @@
+       div.column{display: inline-block; vertical-align: top; width: 50%;}
+   </style>
+ <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
++<link rel="stylesheet"
++      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
++<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+ 
+ <style>
+   html, .view body { background-color: black; counter-reset: slideidx; }
+@@ -932,8 +935,8 @@
    * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
    [role="note"] { display: none; }
    body {
@@ -13,3 +23,11 @@ index 8f8315b..49c2022 100644
      position: absolute; top: 50%; left: 50%;
      overflow: hidden;
      display: none;
+@@ -1386,6 +1389,7 @@
+   }
+ 
+ </script>
++<script>hljs.initHighlightingOnLoad();</script>
+ <!-- vim: set fdm=marker: }}} -->
+ </body>
+ </html>
