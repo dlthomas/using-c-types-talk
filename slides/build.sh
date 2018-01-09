@@ -5,12 +5,12 @@
 
 STARTED=
 
+function endslide { echo; echo "----"; echo; }
+
 ls *.c | {
 	while read nextc; do
     if [ "$STARTED" ]; then
-      echo
-      echo "----"
-      echo
+      endslide
     fi
     STARTED=1
     name=$(basename "$nextc" .c)
@@ -23,8 +23,9 @@ ls *.c | {
       echo ":::"
     fi
     if ! gcc -c -o /dev/null $nextc 2>tmp.out; then
-      echo
+      endslide
       sed 's/^/> /' <tmp.out
+      rm tmp.out
     fi
 	done
 } | pandoc --standalone -t dzslides -o slides.html $@
