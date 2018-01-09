@@ -24,8 +24,14 @@ ls *.c | {
     fi
     if ! gcc $(sdl2-config --cflags) -c -o /dev/null $nextc 2>tmp.out; then
       endslide
-      sed 's/^/> /' <tmp.out
+      echo "~~~"
+      sed 's/./ &/' "$nextc"
+      echo "~~~"
+      echo "~~~"
+      sed 's/./ &/' tmp.out
+      echo "~~~"
       rm tmp.out
     fi
 	done
-} | pandoc --standalone -t dzslides -o slides.html $@
+} >slides.md
+pandoc --standalone -t dzslides -o slides.html $@ <slides.md
