@@ -150,7 +150,7 @@
 
 <pre><code>
 
-    /* Using C Types */
+     /* Using C Types */
 
 
 
@@ -161,28 +161,7 @@
 
 
 
-                 /* David L. L. Thomas, Jan 2018 */
-
-
-
-</code></pre>
-</section>
-<section class="slide level6">
-
-<pre><code>
-
-    /* Using C Types */
-
-int make_market(int bid, int ask);
-
-
-
-
-
-
-
-
-
+                  /* David L. L. Thomas, Jan 2018 */
 
 
 
@@ -192,19 +171,40 @@ int make_market(int bid, int ask);
 
 <pre><code>
 
+     /* Using C Types */
+
+ int make_market(int bid, int ask);
 
 
-int make_market(int bid, int ask);
 
 
-int test(void) {
+
+
+
+
+
+
+
+
+</code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code>
+
+
+
+ int make_market(int bid, int ask);
+
+
+ int test(void) {
     int bid = 1;
     int ask = 3;
 
     return make_market(ask, bid);
 
 
-}
+ }
 
 
 </code></pre>
@@ -212,20 +212,20 @@ int test(void) {
 <section class="slide level6">
 
 <pre><code>
-typedef int price_t;
+ typedef int price_t;
 
 
-int make_market(price_t bid, price_t ask);
+ int make_market(price_t bid, price_t ask);
 
 
-int test(void) {
+ int test(void) {
     price_t bid = 1;
     price_t ask = 3;
 
     return make_market(ask, bid);
 
 
-}
+ }
 
 
 </code></pre>
@@ -233,20 +233,20 @@ int test(void) {
 <section class="slide level6">
 
 <pre><code>
-typedef int bid_price_t;
-typedef int ask_price_t;
+ typedef int bid_price_t;
+ typedef int ask_price_t;
 
-int make_market(bid_price_t, ask_price_t);
+ int make_market(bid_price_t, ask_price_t);
 
 
-int test(void) {
+ int test(void) {
     bid_price_t bid = 1;
     ask_price_t ask = 3;
 
     return make_market(ask, bid);
 
 
-}
+ }
 
 
 </code></pre>
@@ -254,20 +254,20 @@ int test(void) {
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } bid_price_t;
-typedef struct { int v; } ask_price_t;
+ typedef struct { int v; } bid_price_t;
+ typedef struct { int v; } ask_price_t;
 
-int make_market(bid_price_t, ask_price_t);
+ int make_market(bid_price_t, ask_price_t);
 
 
-int test(void) {
+ int test(void) {
     bid_price_t bid = { 1 };
     ask_price_t ask = { 3 };
 
     return make_market(ask, bid);
 
 
-}
+ }
 
 
 </code></pre>
@@ -281,20 +281,20 @@ int test(void) {
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } bid_price_t;
-typedef struct { int v; } ask_price_t;
+ typedef struct { int v; } bid_price_t;
+ typedef struct { int v; } ask_price_t;
 
-int make_market(bid_price_t, ask_price_t);
+ int make_market(bid_price_t, ask_price_t);
 
 
-int test(void) {
+ int test(void) {
     bid_price_t bid = { 1 };
     ask_price_t ask = { 3 };
 
     return make_market(bid, ask);
 
 
-}
+ }
 
 
 </code></pre>
@@ -302,20 +302,20 @@ int test(void) {
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } bid_price_t;
-typedef struct { int v; } ask_price_t;
+ typedef struct { int v; } bid_price_t;
+ typedef struct { int v; } ask_price_t;
 
-int make_market(bid_price_t, ask_price_t);
+ int make_market(bid_price_t, ask_price_t);
 
 
-int test(void) {
+ int test(void) {
     
     /* requires C99 or newer */
 
     return make_market(
         (bid_price_t) { 1 },
         (ask_price_t) { 3 });
-}
+ }
 
 
 </code></pre>
@@ -328,12 +328,12 @@ int test(void) {
 
 
 
-int is_crossed(int bid, int ask) {
+ int is_crossed(int bid, int ask) {
 
 
 
     return bid &gt;= ask;
-}
+ }
 
 
 </code></pre>
@@ -341,17 +341,17 @@ int is_crossed(int bid, int ask) {
 <section class="slide level6">
 
 <pre><code>
-typedef int price_t;
+ typedef int price_t;
 
 
 
 
-int is_crossed(price_t bid, price_t ask) {
+ int is_crossed(price_t bid, price_t ask) {
 
 
 
     return bid &gt;= ask;
-}
+ }
 
 
 </code></pre>
@@ -359,17 +359,17 @@ int is_crossed(price_t bid, price_t ask) {
 <section class="slide level6">
 
 <pre><code>
-typedef int bid_price_t;
-typedef int ask_price_t;
+ typedef int bid_price_t;
+ typedef int ask_price_t;
 
 
 
-int is_crossed(bid_price_t bid, ask_price_t ask) {
+ int is_crossed(bid_price_t bid, ask_price_t ask) {
 
 
 
     return bid &gt;= ask;
-}
+ }
 
 
 </code></pre>
@@ -377,17 +377,17 @@ int is_crossed(bid_price_t bid, ask_price_t ask) {
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } bid_price_t;
-typedef struct { int v; } ask_price_t;
+ typedef struct { int v; } bid_price_t;
+ typedef struct { int v; } ask_price_t;
 
 
 
-int is_crossed(bid_price_t bid, ask_price_t ask) {
+ int is_crossed(bid_price_t bid, ask_price_t ask) {
 
 
 
     return bid.v &gt;= ask.v;
-}
+ }
 
 
 </code></pre>
@@ -395,17 +395,17 @@ int is_crossed(bid_price_t bid, ask_price_t ask) {
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } bid_price_t;
-typedef struct { int v; } ask_price_t;
+ typedef struct { int v; } bid_price_t;
+ typedef struct { int v; } ask_price_t;
 
 
 
-int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
+ int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
     int bid = bid_price.v;
     int ask = ask_price.v;
 
     return bid &gt;= ask;
-}
+ }
 
 
 </code></pre>
@@ -423,7 +423,7 @@ int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
 
 
 
-int do_the_thing(int foo_index, int bar_index);
+ int do_the_thing(int foo_index, int bar_index);
 
 
 </code></pre>
@@ -431,8 +431,8 @@ int do_the_thing(int foo_index, int bar_index);
 <section class="slide level6">
 
 <pre><code>
-typedef int foo_index_t;
-typedef int bar_index_t;
+ typedef int foo_index_t;
+ typedef int bar_index_t;
 
 
 
@@ -441,25 +441,7 @@ typedef int bar_index_t;
 
 
 
-int do_the_thing(foo_index_t, bar_index_t);
-
-
-</code></pre>
-</section>
-<section class="slide level6">
-
-<pre><code>
-typedef struct { int v; } foo_index_t;
-typedef struct { int v; } bar_index_t;
-
-
-
-
-
-
-
-
-int do_the_thing(foo_index_t, bar_index_t);
+ int do_the_thing(foo_index_t, bar_index_t);
 
 
 </code></pre>
@@ -467,35 +449,17 @@ int do_the_thing(foo_index_t, bar_index_t);
 <section class="slide level6">
 
 <pre><code>
-typedef struct { int v; } foo_index_t;
-typedef struct { int v; } bar_index_t;
+ typedef struct { int v; } foo_index_t;
+ typedef struct { int v; } bar_index_t;
 
 
-typedef struct foo_s { /* ... */ } foo_t;
-typedef struct bar_s { /* ... */ } bar_t;
-
-foo_t *lookup_foo(foo_index_t, foo_t *);
-bar_t *lookup_bar(bar_index_t, bar_t *);
-
-int do_the_thing(foo_index_t, bar_index_t);
 
 
-</code></pre>
-</section>
-<section class="slide level6">
 
-<pre><code>
-typedef struct { int v; } foo_index_t;
-typedef struct { int v; } bar_index_t;
-typedef struct { int v; } bid_price_t;
 
-typedef struct foo_s { /* ... */ } foo_t;
-typedef struct bar_s { /* ... */ } bar_t;
 
-foo_t *lookup_foo(foo_index_t, foo_t *);
-bar_t *lookup_bar(bar_index_t, bar_t *);
 
-int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
+ int do_the_thing(foo_index_t, bar_index_t);
 
 
 </code></pre>
@@ -503,22 +467,58 @@ int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
 <section class="slide level6">
 
 <pre><code>
+ typedef struct { int v; } foo_index_t;
+ typedef struct { int v; } bar_index_t;
+
+
+ typedef struct foo_s { /* ... */ } foo_t;
+ typedef struct bar_s { /* ... */ } bar_t;
+
+ foo_t *lookup_foo(foo_index_t, foo_t *);
+ bar_t *lookup_bar(bar_index_t, bar_t *);
+
+ int do_the_thing(foo_index_t, bar_index_t);
+
+
+</code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code>
+ typedef struct { int v; } foo_index_t;
+ typedef struct { int v; } bar_index_t;
+ typedef struct { int v; } bid_price_t;
+
+ typedef struct foo_s { /* ... */ } foo_t;
+ typedef struct bar_s { /* ... */ } bar_t;
+
+ foo_t *lookup_foo(foo_index_t, foo_t *);
+ bar_t *lookup_bar(bar_index_t, bar_t *);
+
+ int do_the_thing(foo_index_t, bar_index_t, bid_price_t);
+
+
+</code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code>
 
 
 
 
 
 
-int bar();
+ int bar();
 
-int foo() {
+ int foo() {
     return bar();
-}
+ }
 
 
-int qux() {
+ int qux() {
     /* return bar(); */
-}
+ }
 </code></pre>
 </section>
 <section class="slide level6">
@@ -526,79 +526,79 @@ int qux() {
 <pre><code>
 
 
-typedef struct main_thread_s { /* int unused; */ } main_thread_t;
-typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+ typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+ typedef struct other_thread_s { /* int unused; */ } other_thread_t;
 
 
-int bar(main_thread_t);
+ int bar(main_thread_t);
 
-int foo(main_thread_t th) {
+ int foo(main_thread_t th) {
     return bar(th);
-}
+ }
 
-/*
-int qux(other_thread_t th) {
+ /*
+ int qux(other_thread_t th) {
     return bar(th);
-}
-*/</code></pre>
+ }
+ */</code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
 
 
-typedef struct main_thread_s { /* int unused; */ } main_thread_t;
-typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+ typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+ typedef struct other_thread_s { /* int unused; */ } other_thread_t;
 
 
-int bar(main_thread_t);
+ int bar(main_thread_t);
 
-int foo(main_thread_t th __attribute__((unused))) {
+ int foo(main_thread_t th __attribute__((unused))) {
     return bar(th);
-}
+ }
 
-/*
-int qux(other_thread_t th __attribute__((unused))) {
+ /*
+ int qux(other_thread_t th __attribute__((unused))) {
     return bar(th);
-}
-*/</code></pre>
+ }
+ */</code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
-#define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
+ #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
 
-typedef struct main_thread_s { /* int unused; */ } main_thread_t;
-typedef struct other_thread_s { /* int unused; */ } other_thread_t;
+ typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+ typedef struct other_thread_s { /* int unused; */ } other_thread_t;
 
 
-int bar(TH(main));
+ int bar(TH(main));
 
-int foo(TH(main)) {
+ int foo(TH(main)) {
     return bar(th);
-}
+ }
 
-/*
-int qux(TH(other)) {
+ /*
+ int qux(TH(other)) {
     return bar(th);
-}
-*/</code></pre>
+ }
+ */</code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
-#include &lt;SDL.h&gt;
+ #include &lt;SDL.h&gt;
 
 
-SDL_Texture * volatile texture = NULL;
+ SDL_Texture * volatile texture = NULL;
 
-int load_image_thread(void *renderer) {
+ int load_image_thread(void *renderer) {
     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     return 0;
-}
+ }
 
-void render_image() {
+ void render_image() {
     SDL_Window *win = SDL_CreateWindow(&quot;Hello World!&quot;, 100, 100, 640, 480, SDL_WINDOW_SHOWN);   
     SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
@@ -622,15 +622,15 @@ void render_image() {
         SDL_RenderPresent(renderer);
         SDL_Delay(100);
     }
-}
+ }
 
-int main() {
+ int main() {
 
     if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
 
     render_image();
     return EXIT_SUCCESS;
-}</code></pre>
+ }</code></pre>
 </section>
 <section class="slide level6">
 
@@ -641,18 +641,18 @@ int main() {
 <section class="slide level6">
 
 <pre><code>
-#include &quot;CheckedSDL.h&quot;
+ #include &quot;CheckedSDL.h&quot;
 
 
-SDL_Texture * volatile texture = NULL;
+ SDL_Texture * volatile texture = NULL;
 
-int load_image_thread(void *renderer) {
+ int load_image_thread(void *renderer) {
     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     return 0;
-}
+ }
 
-void render_image(TH(main)) {
+ void render_image(TH(main)) {
     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;, 100, 100, 640, 480, SDL_WINDOW_SHOWN);   
     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
@@ -676,15 +676,15 @@ void render_image(TH(main)) {
         SDL_RenderPresent(th, renderer);
         SDL_Delay(100);
     }
-}
+ }
 
-int main() {
+ int main() {
     main_thread_t th;
     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
 
     render_image(th);
     return EXIT_SUCCESS;
-}</code></pre>
+ }</code></pre>
 </section>
 <section class="slide level6">
 
@@ -695,18 +695,18 @@ int main() {
 <section class="slide level6">
 
 <pre><code>
-#include &quot;CheckedSDL.h&quot;
+ #include &quot;CheckedSDL.h&quot;
 
 
-SDL_Texture * volatile texture = NULL;
+ SDL_Texture * volatile texture = NULL;
 
-int load_image_thread(void *renderer) {
+ int load_image_thread(void *renderer) {
     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
     texture = SDL_CreateTextureFromSurface(th, renderer, surface);
     return 0;
-}
+ }
 
-void render_image(TH(main)) {
+ void render_image(TH(main)) {
     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;, 100, 100, 640, 480, SDL_WINDOW_SHOWN);   
     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
@@ -730,15 +730,15 @@ void render_image(TH(main)) {
         SDL_RenderPresent(th, renderer);
         SDL_Delay(100);
     }
-}
+ }
 
-int main() {
+ int main() {
     main_thread_t th;
     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
 
     render_image(th);
     return EXIT_SUCCESS;
-}</code></pre>
+ }</code></pre>
 </section>
 <section class="slide level6">
 
@@ -749,18 +749,18 @@ int main() {
 <section class="slide level6">
 
 <pre><code>
-#include &quot;CheckedSDL.h&quot;
+ #include &quot;CheckedSDL.h&quot;
 
 
-SDL_Surface * volatile surface = NULL;
+ SDL_Surface * volatile surface = NULL;
 
-int load_image_thread(void *renderer) {
+ int load_image_thread(void *renderer) {
     surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
 
     return 0;
-}
+ }
 
-void render_image(TH(main)) {
+ void render_image(TH(main)) {
     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;, 100, 100, 640, 480, SDL_WINDOW_SHOWN);   
     SDL_Renderer *renderer = SDL_CreateRenderer(th, win, -1, 0);
     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
@@ -784,15 +784,15 @@ void render_image(TH(main)) {
         SDL_RenderPresent(th, renderer);
         SDL_Delay(100);
     }
-}
+ }
 
-int main() {
+ int main() {
     main_thread_t th;
     if(SDL_Init(th, SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
 
     render_image(th);
     return EXIT_SUCCESS;
-}</code></pre>
+ }</code></pre>
 </section>
 <section class="slide level6">
 

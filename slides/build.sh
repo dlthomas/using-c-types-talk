@@ -15,7 +15,7 @@ ls *.c | {
     STARTED=1
     name=$(basename "$nextc" .c)
     echo "~~~"
-    cat "$nextc"
+    sed 's/./ &/' "$nextc"
     echo "~~~"
     if [ -f $name.notes ]; then
       echo "::: notes"
