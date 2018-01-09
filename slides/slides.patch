@@ -1,9 +1,12 @@
 diff --git b/slides/slides.html a/slides/slides.html
-index eb3ff0e..a9d9c7e 100644
+index bcd0b2e..ef188b5 100644
 --- b/slides/slides.html
 +++ a/slides/slides.html
-@@ -10,6 +10,9 @@
+@@ -8,8 +8,12 @@
+       span.smallcaps{font-variant: small-caps;}
+       span.underline{text-decoration: underline;}
        div.column{display: inline-block; vertical-align: top; width: 50%;}
++      pre.error{border-style: solid; border-color: red; border-width: 0.5em;}
    </style>
  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 +<link rel="stylesheet"
@@ -12,7 +15,7 @@ index eb3ff0e..a9d9c7e 100644
  
  <style>
    html, .view body { background-color: black; counter-reset: slideidx; }
-@@ -103,10 +106,10 @@
+@@ -103,10 +107,10 @@
       https://developer.mozilla.org/en/CSS/CSS_transitions
       How to use CSS3 Transitions: */
    section {
@@ -27,7 +30,7 @@ index eb3ff0e..a9d9c7e 100644
    }
    .view section {
      -moz-transition: none;
-@@ -1661,8 +1664,8 @@
+@@ -1734,8 +1738,8 @@
    * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
    [role="note"] { display: none; }
    body {
@@ -38,7 +41,7 @@ index eb3ff0e..a9d9c7e 100644
      position: absolute; top: 50%; left: 50%;
      overflow: hidden;
      display: none;
-@@ -2115,6 +2118,7 @@
+@@ -2188,6 +2192,7 @@
    }
  
  </script>
