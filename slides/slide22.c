@@ -14,7 +14,7 @@ int foo(TH(main)) {
 
 
 int qux(TH(other)) {
- /* return bar(th); */
+  return 2;
 }
 
 

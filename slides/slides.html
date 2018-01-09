@@ -1310,7 +1310,7 @@
  14 
  15 
  16 int qux(other_thread_t th __attribute__((unused))) {
- 17  /* return bar(th); */
+ 17   return 2;
  18 }
  19 
  20 
@@ -1361,7 +1361,7 @@
  14 
  15 
  16 int qux(TH(other)) {
- 17  /* return bar(th); */
+ 17   return 2;
  18 }
  19 
  20 
