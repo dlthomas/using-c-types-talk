@@ -634,12 +634,6 @@
 </section>
 <section class="slide level6">
 
-<blockquote>
-<p>23.c:2:10: fatal error: ‘SDL.h’ file not found #include &lt;SDL.h&gt; ^~~~~~~ 1 error generated.</p>
-</blockquote>
-</section>
-<section class="slide level6">
-
 <pre><code>
  #include &quot;CheckedSDL.h&quot;
 
@@ -689,7 +683,7 @@
 <section class="slide level6">
 
 <blockquote>
-<p>In file included from 24.c:2: ./CheckedSDL.h:9:10: fatal error: ‘SDL.h’ file not found #include &lt;SDL.h&gt; ^~~~~~~ 1 error generated.</p>
+<p>24.c:9:58: error: too few arguments to function call, expected 3, have 2 texture = SDL_CreateTextureFromSurface(renderer, surface); ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ./CheckedSDL.h:29:1: note: ‘SDL_CreateTextureFromSurface’ declared here extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(TH(main), SDL_Renderer * renderer, SDL_Surface * surface); ^ 1 error generated.</p>
 </blockquote>
 </section>
 <section class="slide level6">
@@ -743,7 +737,7 @@
 <section class="slide level6">
 
 <blockquote>
-<p>In file included from 25.c:2: ./CheckedSDL.h:9:10: fatal error: ‘SDL.h’ file not found #include &lt;SDL.h&gt; ^~~~~~~ 1 error generated.</p>
+<p>25.c:9:41: error: use of undeclared identifier ‘th’ texture = SDL_CreateTextureFromSurface(th, renderer, surface); ^ 1 error generated.</p>
 </blockquote>
 </section>
 <section class="slide level6">
@@ -793,12 +787,6 @@
     render_image(th);
     return EXIT_SUCCESS;
  }</code></pre>
-</section>
-<section class="slide level6">
-
-<blockquote>
-<p>In file included from 26.c:2: ./CheckedSDL.h:9:10: fatal error: ‘SDL.h’ file not found #include &lt;SDL.h&gt; ^~~~~~~ 1 error generated.</p>
-</blockquote>
 </section>
 <!-- {{{{ dzslides core
 #

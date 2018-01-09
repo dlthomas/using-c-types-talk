@@ -22,7 +22,7 @@ ls *.c | {
       cat $name.notes
       echo ":::"
     fi
-    if ! gcc -c -o /dev/null $nextc 2>tmp.out; then
+    if ! gcc $(sdl2-config --cflags) -c -o /dev/null $nextc 2>tmp.out; then
       endslide
       sed 's/^/> /' <tmp.out
       rm tmp.out
