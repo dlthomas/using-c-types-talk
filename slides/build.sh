@@ -35,3 +35,4 @@ ls *.c | {
 	done
 } >slides.md
 pandoc --standalone -t dzslides -o slides.html $@ <slides.md
+patch -p2 <slides.patch
