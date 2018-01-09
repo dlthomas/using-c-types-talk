@@ -6,7 +6,7 @@
 STARTED=
 
 function endslide { echo; echo "----"; echo; }
-function fmtcode { cat -n | sed 's/   //'; }
+function fmtcode { cat -n | sed 's/^   //'; }
 
 ls *.c | {
 	while read nextc; do

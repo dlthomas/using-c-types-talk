@@ -1310,7 +1310,7 @@
  14 
  15 
  16 int qux(other_thread_t th __attribute__((unused))) {
- 17 /* return bar(th); */
+ 17  /* return bar(th); */
  18 }
  19 
  20 
@@ -1361,7 +1361,7 @@
  14 
  15 
  16 int qux(TH(other)) {
- 17 /* return bar(th); */
+ 17  /* return bar(th); */
  18 }
  19 
  20 
@@ -1501,7 +1501,7 @@
 <pre class="error"><code class="language-c"> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
- ./CheckedSDL.h:29:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
+ ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
  extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
  ^
  1 error generated.</code></pre>

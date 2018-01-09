@@ -1,3 +1,4 @@
+/* CheckedSDL.h */
 #define SDL_CreateTextureFromSurface SDL_CreateTextureFromSurface_Nope
 #define SDL_CreateRenderer SDL_CreateRenderer_Nope
 #define SDL_CreateWindow SDL_CreateWindow_Nope
@@ -43,3 +44,5 @@ extern DECLSPEC int SDLCALL SDL_RenderCopy(TH(main),
                                            SDL_Texture * texture,
                                            const SDL_Rect * srcrect,
                                            const SDL_Rect * dstrect);
+
+
