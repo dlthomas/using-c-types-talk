@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 typedef int price_t;
 
 
@@ -13,6 +21,28 @@ int test(void) {
 
 
 }
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

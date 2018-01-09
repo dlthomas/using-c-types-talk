@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 typedef struct { int v; } bid_price_t;
 typedef struct { int v; } ask_price_t;
 
@@ -13,6 +21,28 @@ int test(void) {
 
 
 }
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,6 +5,7 @@
 
 
 
+
 int bar();
 
 int foo() {
@@ -15,4 +16,33 @@ int foo() {
 int qux() {
 	/* return bar(); */
 }
+
+
+
+
+
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

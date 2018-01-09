@@ -2,6 +2,14 @@
 
 
 
+
+
+
+
+
+
+
+
 int make_market(int bid, int ask);
 
 
@@ -13,6 +21,28 @@ int test(void) {
 
 
 }
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

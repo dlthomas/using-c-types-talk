@@ -153,7 +153,13 @@
 
 <pre><code>
 
-     /* Using C Types */
+
+
+
+
+
+
+           /* Using C Types */
 
 
 
@@ -164,7 +170,31 @@
 
 
 
-                  /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -174,7 +204,15 @@
 
 <pre><code>
 
-     /* Using C Types */
+
+
+
+
+
+
+           /* Using C Types */
+
+
 
  int make_market(int bid, int ask);
 
@@ -189,11 +227,41 @@
 
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
 
 
 
@@ -210,11 +278,41 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef int price_t;
 
 
@@ -231,11 +329,41 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef int bid_price_t;
  typedef int ask_price_t;
 
@@ -252,11 +380,41 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -273,11 +431,41 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -294,11 +482,33 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
-<pre><code> slide06.c:12:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
+<pre><code> slide06.c:20:21: error: passing &#39;ask_price_t&#39; to parameter of incompatible type &#39;bid_price_t&#39;
          return make_market(ask, bid);
                             ^~~
- slide06.c:5:28: note: passing argument to parameter here
+ slide06.c:13:28: note: passing argument to parameter here
  int make_market(bid_price_t, ask_price_t);
                             ^
  1 error generated.</code></pre>
@@ -306,6 +516,14 @@
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -322,11 +540,41 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
+
+
+
+
+
+
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -343,11 +591,34 @@
  }
 
 
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
 
 
 
@@ -361,11 +632,44 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
  typedef int price_t;
 
 
@@ -379,11 +683,44 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                                               /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </code></pre>
 </section>
 <section class="slide level6">
 
 <pre><code>
+
  typedef int bid_price_t;
  typedef int ask_price_t;
 
@@ -402,6 +739,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -420,6 +758,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef struct { int v; } bid_price_t;
  typedef struct { int v; } ask_price_t;
 
@@ -448,6 +787,7 @@
 
 
 
+
  int do_the_thing(int foo_index, int bar_index);
 
 
@@ -456,6 +796,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef int foo_index_t;
  typedef int bar_index_t;
 
@@ -474,6 +815,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
 
@@ -492,6 +834,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
 
@@ -510,6 +853,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  typedef struct { int v; } foo_index_t;
  typedef struct { int v; } bar_index_t;
  typedef struct { int v; } bid_price_t;
@@ -534,6 +878,7 @@
 
 
 
+
  int bar();
 
  int foo() {
@@ -549,6 +894,7 @@
 <section class="slide level6">
 
 <pre><code>
+
 
 
  typedef struct main_thread_s { /* int unused; */ } main_thread_t;
@@ -572,6 +918,7 @@
 <pre><code>
 
 
+
  typedef struct main_thread_s { /* int unused; */ } main_thread_t;
  typedef struct other_thread_s { /* int unused; */ } other_thread_t;
 
@@ -591,6 +938,7 @@
 <section class="slide level6">
 
 <pre><code>
+
  #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
 
  typedef struct main_thread_s { /* int unused; */ } main_thread_t;

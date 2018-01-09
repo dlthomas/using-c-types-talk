@@ -1,4 +1,5 @@
 
+
 #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
 
 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
@@ -16,3 +17,32 @@ int qux(TH(other)) {
 	return bar(th);
 }
 */
+
+
+
+
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

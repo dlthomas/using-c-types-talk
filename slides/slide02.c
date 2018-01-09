@@ -1,8 +1,38 @@
 
 
-    /* Using C Types */
+
+
+
+
+
+
+          /* Using C Types */
+
+
 
 int make_market(int bid, int ask);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 
+
 typedef struct { int v; } bid_price_t;
 typedef struct { int v; } ask_price_t;
 
@@ -10,6 +11,38 @@ int is_crossed(bid_price_t bid_price, ask_price_t ask_price) {
 
 	return bid >= ask;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              /* David L. L. Thomas, Jan 2018 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
