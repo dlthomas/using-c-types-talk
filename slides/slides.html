@@ -1447,6 +1447,57 @@
 </section>
 <section class="slide level6">
 
+<pre><code class="language-c">  1 /* CheckedSDL.h */
+  2 
+  3 #define SDL_CreateTextureFromSurface SDL_CreateTextureFromSurface_Nope
+  4 #define SDL_CreateRenderer SDL_CreateRenderer_Nope
+  5 #define SDL_CreateWindow SDL_CreateWindow_Nope
+  6 #define SDL_PollEvent SDL_PollEvent_Nope
+  7 #define SDL_RenderClear SDL_RenderClear_Nope
+  8 #define SDL_RenderCopy SDL_RenderCopy_Nope
+  9 #define SDL_RenderPresent SDL_RenderPresent_Nope
+ 10 #define SDL_Init SDL_Init_Nope
+ 11 #include &lt;SDL.h&gt;
+ 12 #undef SDL_CreateTextureFromSurface
+ 13 #undef SDL_CreateRenderer
+ 14 #undef SDL_CreateWindow
+ 15 #undef SDL_PollEvent
+ 16 #undef SDL_RenderClear
+ 17 #undef SDL_RenderCopy
+ 18 #undef SDL_RenderPresent
+ 19 #undef SDL_Init
+ 20 
+ 21 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
+ 22 #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
+ 23 
+ 24 extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindow(
+ 25     TH(main),
+ 26     const char *title, int x, int y, int w, int h, Uint32 flags);
+ 27 
+ 28 extern DECLSPEC int SDLCALL SDL_PollEvent(TH(main), SDL_Event * event);
+ 29 
+ 30 extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(
+ 31     TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
+ 32 
+ 33 extern DECLSPEC SDL_Renderer * SDLCALL SDL_CreateRenderer(
+ 34     TH(main),
+ 35     SDL_Window * window, int index, Uint32 flags);
+ 36 
+ 37 extern DECLSPEC int SDLCALL SDL_Init(TH(main), Uint32 flags);
+ 38 
+ 39 extern DECLSPEC void SDLCALL SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
+ 40 
+ 41 extern DECLSPEC void SDLCALL SDL_RenderClear(TH(main), SDL_Renderer * renderer);
+ 42 
+ 43 extern DECLSPEC int SDLCALL SDL_RenderCopy(
+ 44     TH(main),
+ 45     SDL_Renderer * renderer, SDL_Texture * texture,
+ 46     const SDL_Rect * srcrect, const SDL_Rect * dstrect);
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
+
 <pre><code class="language-c">  1 
   2 #include &quot;CheckedSDL.h&quot;
   3 
@@ -1498,11 +1549,11 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide24.c:9:58: error: too few arguments to function call, expected 3, have 2
+<pre class="error"><code class="language-c"> slide25.c:9:58: error: too few arguments to function call, expected 3, have 2
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
  ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
- extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
+ extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(
  ^
  1 error generated.</code></pre>
 </section>
@@ -1610,7 +1661,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide25.c:9:41: error: use of undeclared identifier &#39;th&#39;
+<pre class="error"><code class="language-c"> slide26.c:9:41: error: use of undeclared identifier &#39;th&#39;
          texture = SDL_CreateTextureFromSurface(th, renderer, surface);
                                                 ^
  1 error generated.</code></pre>
