@@ -1470,26 +1470,26 @@
  21 typedef struct main_thread_s { /* int unused; */ } main_thread_t;
  22 #define TH(THREAD_NAME) THREAD_NAME##_thread_t th __attribute__((unused))
  23 
- 24 extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindow(
+ 24 SDL_Window * SDL_CreateWindow(
  25     TH(main),
  26     const char *title, int x, int y, int w, int h, Uint32 flags);
  27 
- 28 extern DECLSPEC int SDLCALL SDL_PollEvent(TH(main), SDL_Event * event);
+ 28 int SDL_PollEvent(TH(main), SDL_Event * event);
  29 
- 30 extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(
+ 30 SDL_Texture * SDL_CreateTextureFromSurface(
  31     TH(main), SDL_Renderer * renderer, SDL_Surface * surface);
  32 
- 33 extern DECLSPEC SDL_Renderer * SDLCALL SDL_CreateRenderer(
+ 33 SDL_Renderer * SDL_CreateRenderer(
  34     TH(main),
  35     SDL_Window * window, int index, Uint32 flags);
  36 
- 37 extern DECLSPEC int SDLCALL SDL_Init(TH(main), Uint32 flags);
+ 37 int SDL_Init(TH(main), Uint32 flags);
  38 
- 39 extern DECLSPEC void SDLCALL SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
+ 39 void SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
  40 
- 41 extern DECLSPEC void SDLCALL SDL_RenderClear(TH(main), SDL_Renderer * renderer);
+ 41 void SDL_RenderClear(TH(main), SDL_Renderer * renderer);
  42 
- 43 extern DECLSPEC int SDLCALL SDL_RenderCopy(
+ 43 int SDL_RenderCopy(
  44     TH(main),
  45     SDL_Renderer * renderer, SDL_Texture * texture,
  46     const SDL_Rect * srcrect, const SDL_Rect * dstrect);
@@ -1553,7 +1553,7 @@
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
  ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
- extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(
+ SDL_Texture * SDL_CreateTextureFromSurface(
  ^
  1 error generated.</code></pre>
 </section>
