@@ -1561,6 +1561,160 @@
  10     return 0;
  11 }
  12 
+ 13 void render_image() {
+ 14     SDL_Window *win = SDL_CreateWindow(&quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(&amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(renderer);
+ 34         if(texture) SDL_RenderCopy(renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41 
+ 42     if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image();
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
+
+<pre class="error"><code class="language-c"> slide26.c:9:58: error: too few arguments to function call, expected 3, have 2
+         texture = SDL_CreateTextureFromSurface(renderer, surface);
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
+ ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
+ SDL_Texture * SDL_CreateTextureFromSurface(
+ ^
+ slide26.c:15:43: error: too few arguments to function call, expected 7, have 6
+       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+                                           ^
+ ./CheckedSDL.h:24:1: note: &#39;SDL_CreateWindow&#39; declared here
+ SDL_Window * SDL_CreateWindow(
+ ^
+ slide26.c:16:56: error: too few arguments to function call, expected 4, have 3
+         SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
+                                  ~~~~~~~~~~~~~~~~~~           ^
+ ./CheckedSDL.h:33:1: note: &#39;SDL_CreateRenderer&#39; declared here
+ SDL_Renderer * SDL_CreateRenderer(
+ ^
+ slide26.c:22:26: error: too few arguments to function call, expected 2, have 1
+                 while (SDL_PollEvent(&amp;e)){
+                        ~~~~~~~~~~~~~   ^
+ ./CheckedSDL.h:28:1: note: &#39;SDL_PollEvent&#39; declared here
+ int SDL_PollEvent(TH(main), SDL_Event * event);
+ ^
+ slide26.c:33:27: error: too few arguments to function call, expected 2, have 1
+                 SDL_RenderClear(renderer);
+                 ~~~~~~~~~~~~~~~         ^
+ ./CheckedSDL.h:41:1: note: &#39;SDL_RenderClear&#39; declared here
+ int SDL_RenderClear(TH(main), SDL_Renderer * renderer);
+ ^
+ slide26.c:34:59: error: too few arguments to function call, expected 5, have 4
+                 if(texture) SDL_RenderCopy(renderer, texture, NULL, NULL);
+                             ~~~~~~~~~~~~~~                              ^
+ ./CheckedSDL.h:43:1: note: &#39;SDL_RenderCopy&#39; declared here
+ int SDL_RenderCopy(
+ ^
+ slide26.c:35:29: error: too few arguments to function call, expected 2, have 1
+                 SDL_RenderPresent(renderer);
+                 ~~~~~~~~~~~~~~~~~         ^
+ ./CheckedSDL.h:39:1: note: &#39;SDL_RenderPresent&#39; declared here
+ void SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
+ ^
+ slide26.c:42:28: error: too few arguments to function call, expected 2, have 1
+         if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+            ~~~~~~~~               ^
+ ./CheckedSDL.h:37:1: note: &#39;SDL_Init&#39; declared here
+ int SDL_Init(TH(main), Uint32 flags);
+ ^
+ 8 errors generated.</code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
+ 13 void render_image() {
+ 14     SDL_Window *win = SDL_CreateWindow(&quot;Hello World!&quot;,
+ 15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
+ 16     SDL_Renderer *renderer = SDL_CreateRenderer(win, -1, 0);
+ 17     SDL_CreateThread(load_image_thread, &quot;image loader&quot;, renderer);
+ 18 
+ 19 
+ 20     for(;;) {
+ 21         SDL_Event e;
+ 22         while (SDL_PollEvent(&amp;e)){
+ 23             switch(e.type) {
+ 24                 case SDL_QUIT: return;
+ 25             }
+ 26         }
+ 27 
+ 28 
+ 29 
+ 30 
+ 31 
+ 32 
+ 33         SDL_RenderClear(renderer);
+ 34         if(texture) SDL_RenderCopy(renderer, texture, NULL, NULL);
+ 35         SDL_RenderPresent(renderer);
+ 36         SDL_Delay(100);
+ 37     }
+ 38 }
+ 39 
+ 40 int main() {
+ 41 
+ 42     if(SDL_Init(SDL_INIT_VIDEO) != 0) return EXIT_FAILURE;
+ 43 
+ 44     render_image();
+ 45     return EXIT_SUCCESS;
+ 46 }
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
+
+<pre><code class="language-c">  1 
+  2 #include &quot;CheckedSDL.h&quot;
+  3 
+  4 
+  5 SDL_Texture * volatile texture = NULL;
+  6 
+  7 int load_image_thread(void *renderer) {
+  8     SDL_Surface *surface = SDL_LoadBMP(&quot;myimage.bmp&quot;);
+  9     texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 10     return 0;
+ 11 }
+ 12 
  13 void render_image(TH(main)) {
  14     SDL_Window *win = SDL_CreateWindow(th, &quot;Hello World!&quot;,
  15       100, 100, 640, 480, SDL_WINDOW_SHOWN);
@@ -1600,7 +1754,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide26.c:9:58: error: too few arguments to function call, expected 3, have 2
+<pre class="error"><code class="language-c"> slide27.c:9:58: error: too few arguments to function call, expected 3, have 2
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
  ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
@@ -1712,7 +1866,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide27.c:9:41: error: use of undeclared identifier &#39;th&#39;
+<pre class="error"><code class="language-c"> slide28.c:9:41: error: use of undeclared identifier &#39;th&#39;
          texture = SDL_CreateTextureFromSurface(th, renderer, surface);
                                                 ^
  1 error generated.</code></pre>
