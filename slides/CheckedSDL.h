@@ -38,7 +38,7 @@ int SDL_Init(TH(main), Uint32 flags);
 
 void SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
 
-void SDL_RenderClear(TH(main), SDL_Renderer * renderer);
+int SDL_RenderClear(TH(main), SDL_Renderer * renderer);
 
 int SDL_RenderCopy(
     TH(main),

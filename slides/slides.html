@@ -1447,6 +1447,57 @@
 </section>
 <section class="slide level6">
 
+<pre><code class="language-c">  1 
+  2 
+  3 
+  4 
+  5 
+  6 
+  7 
+  8 
+  9 
+ 10 
+ 11 #include &lt;SDL.h&gt;
+ 12 
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 SDL_Window * SDL_CreateWindow(
+ 25 
+ 26     const char *title, int x, int y, int w, int h, Uint32 flags);
+ 27 
+ 28 int SDL_PollEvent(          SDL_Event * event);
+ 29 
+ 30 SDL_Texture * SDL_CreateTextureFromSurface(
+ 31               SDL_Renderer * renderer, SDL_Surface * surface);
+ 32 
+ 33 SDL_Renderer * SDL_CreateRenderer(
+ 34 
+ 35     SDL_Window * window, int index, Uint32 flags);
+ 36 
+ 37 int SDL_Init(          Uint32 flags);
+ 38 
+ 39 void SDL_RenderPresent(          SDL_Renderer * renderer);
+ 40 
+ 41 int SDL_RenderClear(          SDL_Renderer * renderer);
+ 42 
+ 43 int SDL_RenderCopy(
+ 44 
+ 45     SDL_Renderer * renderer, SDL_Texture * texture,
+ 46     const SDL_Rect * srcrect, const SDL_Rect * dstrect);
+ 47 
+ 48 </code></pre>
+</section>
+<section class="slide level6">
+
 <pre><code class="language-c">  1 /* CheckedSDL.h */
   2 
   3 #define SDL_CreateTextureFromSurface SDL_CreateTextureFromSurface_Nope
@@ -1487,7 +1538,7 @@
  38 
  39 void SDL_RenderPresent(TH(main), SDL_Renderer * renderer);
  40 
- 41 void SDL_RenderClear(TH(main), SDL_Renderer * renderer);
+ 41 int SDL_RenderClear(TH(main), SDL_Renderer * renderer);
  42 
  43 int SDL_RenderCopy(
  44     TH(main),
@@ -1549,7 +1600,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide25.c:9:58: error: too few arguments to function call, expected 3, have 2
+<pre class="error"><code class="language-c"> slide26.c:9:58: error: too few arguments to function call, expected 3, have 2
          texture = SDL_CreateTextureFromSurface(renderer, surface);
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  ^
  ./CheckedSDL.h:30:1: note: &#39;SDL_CreateTextureFromSurface&#39; declared here
@@ -1661,7 +1712,7 @@
 </section>
 <section class="slide level6">
 
-<pre class="error"><code class="language-c"> slide26.c:9:41: error: use of undeclared identifier &#39;th&#39;
+<pre class="error"><code class="language-c"> slide27.c:9:41: error: use of undeclared identifier &#39;th&#39;
          texture = SDL_CreateTextureFromSurface(th, renderer, surface);
                                                 ^
  1 error generated.</code></pre>
